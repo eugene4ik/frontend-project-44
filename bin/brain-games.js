@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-console.log('Welcome to the Brain Games!');
-
+import { userNameFunc } from "../src/cli.mjs";
+console.log("Welcome to the Brain Games!");
+userNameFunc();
