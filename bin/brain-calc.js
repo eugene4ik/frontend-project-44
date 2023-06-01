@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from "readline-sync";
-import { counterPlus, counter } from "../src/index.js";
+import { counterPlus, counter, randomNum } from "../src/index.js";
 import { name, userNameFunc } from "../src/cli.mjs";
 
 userNameFunc();
 console.log("What is the result of the expression?");
 const calcCheck = () => {
+  const [numberOne, numberTwo] = randomNum();
   let result;
-  let numberOne = Math.floor(Math.random() * 100);
-  let numberTwo = Math.floor(Math.random() * 100);
   let operators = ["+", "-", "*"];
   let randomOperator = operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
