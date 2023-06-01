@@ -1,23 +1,27 @@
+#!/usr/bin/env node
 import readlineSync from "readline-sync";
-import { name } from "../src/cli.mjs";
-import { counterPlus } from "../src/index.js";
-//import { count, counterPlus } from "../src/index.js";
+import { name, userNameFunc } from "../src/cli.mjs";
+import { counterPlus, counter } from "../src/index.js";
 
-//let counter = 0;
+userNameFunc();
+console.log('Answer "yes" if the number is even, otherwise answer "no". ');
+const evenCheck = () => {
+  let number = Math.floor(Math.random() * 100);
+  console.log(`Question: ${number} `);
+  const anwser = readlineSync.question(`Your anwser: `);
 
-const firstQuestFunc = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no". ');
-  let number = Math.floor(Math.random() * 100); // to index.js
-  const anwser = readlineSync.question(`Question: ${number} `);
-
-  if (number % 2 === 0 && anwser === "yes") {
+  if (
+    (number % 2 === 0 && anwser === "yes") ||
+    (number % 2 != 0 && anwser === "no")
+  ) {
     counterPlus();
-    console.log("Correct!");
-    count();
     if (counter < 3) {
-      firstQuestFunc();
+      evenCheck();
     }
-  } else if (number % 2 === 0 && anwser != "yes") {
+  } else if (
+    (number % 2 === 0 && anwser != "yes") ||
+    (number % 2 != 0 && anwser === "yes")
+  ) {
     console.log(
       "" +
         anwser +
@@ -26,22 +30,5 @@ const firstQuestFunc = () => {
         " !"
     );
   }
-  if (number % 2 != 0 && anwser === "no") {
-    counterPlus();
-    console.log("Correct!");
-    count();
-    if (counter < 3) {
-      firstQuestFunc();
-    }
-  } else if (number % 2 != 0 && anwser != "yes") {
-    console.log(
-      "" +
-        anwser +
-        " is wrong answer ;(. Correct answer was 'no'. Let's try again, " +
-        name +
-        " !"
-    );
-  }
 };
-
-export { firstQuestFunc };
+evenCheck();

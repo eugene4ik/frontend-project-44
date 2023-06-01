@@ -1,11 +1,14 @@
+#!/usr/bin/env node
 import readlineSync from "readline-sync";
-import { name } from "../src/cli.mjs";
-import { counterPlus } from "../src/index.js";
+import { counterPlus, counter } from "../src/index.js";
+import { name, userNameFunc } from "../src/cli.mjs";
 
-const calculator = () => {
-  let result = 0;
-  let numberOne = Math.floor(Math.random() * 10);
-  let numberTwo = Math.floor(Math.random() * 10);
+userNameFunc();
+console.log("What is the result of the expression?");
+const calcCheck = () => {
+  let result;
+  let numberOne = Math.floor(Math.random() * 100);
+  let numberTwo = Math.floor(Math.random() * 100);
   let operators = ["+", "-", "*"];
   let randomOperator = operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
@@ -20,8 +23,10 @@ const calculator = () => {
   }
 
   if (result == anwser) {
-    console.log("Correct!");
     counterPlus();
+    if (counter < 3) {
+      calcCheck();
+    }
   } else if (result != anwser) {
     console.log(
       "'" +
@@ -34,5 +39,4 @@ const calculator = () => {
     );
   }
 };
-
-export { calculator };
+calcCheck();
