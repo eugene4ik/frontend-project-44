@@ -11,7 +11,7 @@ const calcCheck = () => {
   let operators = ["+", "-", "*"];
   let randomOperator = operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
-  const anwser = readlineSync.question(`Your anwser: `);
+  const answer = readlineSync.question(`Your answer: `);
 
   if (randomOperator === "-") {
     result = numberOne - numberTwo;
@@ -21,15 +21,15 @@ const calcCheck = () => {
     result = numberOne * numberTwo;
   }
 
-  if (result == anwser) {
+  if (result == answer) {
     counterPlus();
     if (counter < 3) {
       calcCheck();
     }
-  } else if (result != anwser) {
+  } else if (result != answer) {
     console.log(
       "'" +
-        anwser +
+        answer +
         "' is wrong answer ;(. Correct answer was '" +
         result +
         "'. Let's try again, " +

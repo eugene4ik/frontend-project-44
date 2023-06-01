@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { counterPlus, counter, randomNum, anwser } from "../src/index.js";
+import readlineSync from "readline-sync";
+import { counterPlus, counter, randomNum, answer } from "../src/index.js";
 import { name, userNameFunc } from "../src/cli.mjs";
 
 const [numberOne, numberTwo] = randomNum();
@@ -10,7 +11,7 @@ console.log("Find the greatest common divisor of given numbers.");
 const gcdCheck = () => {
   const [numberOne, numberTwo] = randomNum();
   console.log(`Question: ${numberOne} ${numberTwo} `);
-  const answer = anwser();
+  const answ = answer();
   const gcd = (a, b) => {
     if (b === 0) {
       return a;
@@ -19,12 +20,12 @@ const gcdCheck = () => {
     }
   };
   let result = gcd(numberOne, numberTwo);
-  if (result == answer) {
+  if (result == answ) {
     counterPlus();
     if (counter < 3) {
       gcdCheck();
     }
-  } else if (result != answer) {
+  } else if (result != answ) {
     console.log(
       "'" +
         answer +

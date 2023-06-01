@@ -1,5 +1,5 @@
-import { name } from "../src/cli.mjs";
 import readlineSync from "readline-sync";
+import { name } from "../src/cli.mjs";
 let counter = 0;
 
 const counterPlus = () => {
@@ -16,11 +16,9 @@ const randomNum = () => {
   return [numberOne, numberTwo];
 };
 
-const [numberOne, numberTwo] = randomNum();
-
-const anwser = () => {
-  const anwser = readlineSync.question(`Your anwser: `);
-  return anwser;
+const answer = () => {
+  const answ = readlineSync.question(`Your answer: `);
+  return answ;
 };
 
-export { counterPlus, randomNum, counter, anwser };
+export { counterPlus, randomNum, counter, answer };
