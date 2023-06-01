@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { counterPlus, counter, answer } from "../src/index.js";
+import { counterPlus, counter, answer, randomNum } from "../src/index.js";
 import { name, userNameFunc } from "../src/cli.mjs";
 
 userNameFunc();
@@ -7,8 +7,9 @@ userNameFunc();
 console.log("What number is missing in the progression?");
 
 const progressionCheck = () => {
+  const [numberOne, numberThree] = randomNum();
   let i = Math.floor(Math.random() * 10) + 1;
-  let iter = Math.floor(Math.random() * 5) + 1;
+  let iter = Math.floor(Math.random() * 5) + 1; // numberThree
   let num = i + 50;
   let rand = [];
   for (i; i <= num; i += iter) {

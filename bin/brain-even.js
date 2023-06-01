@@ -1,29 +1,28 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
 import { name, userNameFunc } from "../src/cli.mjs";
-import { counterPlus, counter, randomNum } from "../src/index.js";
+import { counterPlus, counter, randomNum, answer } from "../src/index.js";
 
 userNameFunc();
-console.log('Answer "yes" if the number is even, otherwise answer "no". ');
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const evenCheck = () => {
   const [numberOne] = randomNum();
   console.log(`Question: ${numberOne} `);
-  const answer = readlineSync.question(`Your answer: `);
+  const answ = answer();
   if (
-    (numberOne % 2 === 0 && answer === "yes") ||
-    (numberOne % 2 != 0 && answer === "no")
+    (numberOne % 2 === 0 && answ === "yes") ||
+    (numberOne % 2 != 0 && answ === "no")
   ) {
     counterPlus();
     if (counter < 3) {
       evenCheck();
     }
   } else if (
-    (numberOne % 2 === 0 && answer != "yes") ||
-    (numberOne % 2 != 0 && answer === "yes")
+    (numberOne % 2 === 0 && answ != "yes") ||
+    (numberOne % 2 != 0 && answ != "no")
   ) {
     console.log(
       "" +
-        answer +
+        answ +
         " is wrong answer ;(. Correct answer was 'yes'. Let's try again, " +
         name +
         " !"

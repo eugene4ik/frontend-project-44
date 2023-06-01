@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
 import { counterPlus, counter, randomNum, answer } from "../src/index.js";
 import { name, userNameFunc } from "../src/cli.mjs";
-
-const [numberOne, numberTwo] = randomNum();
 
 userNameFunc();
 console.log("Find the greatest common divisor of given numbers.");
@@ -28,7 +25,7 @@ const gcdCheck = () => {
   } else if (result != answ) {
     console.log(
       "'" +
-        answer +
+        answ +
         "' is wrong answer ;(. Correct answer was '" +
         result +
         "'. Let's try again, " +

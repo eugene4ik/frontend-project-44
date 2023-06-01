@@ -13,7 +13,8 @@ const counterPlus = () => {
 const randomNum = () => {
   let numberOne = Math.floor(Math.random() * 10) + 1;
   let numberTwo = Math.floor(Math.random() * 10) + 1;
-  return [numberOne, numberTwo];
+  let numberThree = Math.floor(Math.random() * 5) + 1;
+  return [numberOne, numberTwo, numberThree];
 };
 
 const answer = () => {
