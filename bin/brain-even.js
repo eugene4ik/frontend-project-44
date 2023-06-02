@@ -21,11 +21,7 @@ const evenCheck = () => {
     (numberOne % 2 != 0 && answ != 'no')
   ) {
     console.log(
-      '' +
-        answ +
-        " is wrong answer ;(. Correct answer was 'yes'. Let's try again, " +
-        name +
-        '!'
+      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
     );
   }
 };

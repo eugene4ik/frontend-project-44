@@ -24,13 +24,7 @@ const gcdCheck = () => {
     }
   } else if (result != answ) {
     console.log(
-      "'" +
-        answ +
-        "' is wrong answer ;(. Correct answer was '" +
-        result +
-        "'. Let's try again, " +
-        name +
-        '!'
+      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
     );
   }
 };
