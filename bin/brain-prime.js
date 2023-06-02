@@ -12,9 +12,12 @@ const primeCheck = () => {
 
   const answ = answer();
 
+  //numberOne === 1 ? (prime = false) : prime === true;
   if (numberOne % 2 == 0 && numberOne != 2) {
     prime = false;
   } else if (numberOne % 3 == 0 && numberOne != 3) {
+    prime = false;
+  } else if (numberOne === 1) {
     prime = false;
   } else if (numberOne % numberOne === 0) {
     prime = true;
