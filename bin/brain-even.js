@@ -16,12 +16,13 @@ const evenCheck = () => {
     if (counter < 3) {
       evenCheck();
     }
-  } else if (
-    (numberOne % 2 === 0 && answ != 'yes') ||
-    (numberOne % 2 != 0 && answ != 'no')
-  ) {
+  } else if (numberOne % 2 === 0 && answ != 'yes') {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`
+    );
+  } else if (numberOne % 2 != 0 && answ != 'no') {
+    console.log(
+      `'${answ}' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`
     );
   }
 };
