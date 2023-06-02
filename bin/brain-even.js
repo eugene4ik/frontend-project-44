@@ -25,7 +25,7 @@ const evenCheck = () => {
         answ +
         " is wrong answer ;(. Correct answer was 'yes'. Let's try again, " +
         name +
-        " !"
+        "!"
     );
   }
 };

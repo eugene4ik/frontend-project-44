@@ -36,7 +36,7 @@ const progressionCheck = () => {
         result +
         "'. Let's try again, " +
         name +
-        " !"
+        "!"
     );
   }
 };

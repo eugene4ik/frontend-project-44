@@ -30,7 +30,7 @@ const gcdCheck = () => {
         result +
         "'. Let's try again, " +
         name +
-        " !"
+        "!"
     );
   }
 };

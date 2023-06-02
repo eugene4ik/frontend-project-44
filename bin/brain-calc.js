@@ -34,7 +34,7 @@ const calcCheck = () => {
         result +
         "'. Let's try again, " +
         name +
-        " !"
+        "!"
     );
   }
 };
