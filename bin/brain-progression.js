@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import { counterPlus, counter, answer, randomNum } from "../src/index.js";
-import { name, userNameFunc } from "../src/cli.mjs";
+import { counterPlus, counter, answer, randomNum } from '../src/index.js';
+import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
 
-console.log("What number is missing in the progression?");
+console.log('What number is missing in the progression?');
 
 const progressionCheck = () => {
   const [numberOne, numberThree] = randomNum();
@@ -20,8 +20,8 @@ const progressionCheck = () => {
   }
   let randomIndex = Math.floor(Math.random() * rand.length);
   let result = rand[randomIndex];
-  rand[randomIndex] = "..";
-  console.log(`Question: ${rand.join(" ")} `);
+  rand[randomIndex] = '..';
+  console.log(`Question: ${rand.join(' ')} `);
   const answ = answer();
   if (result == answ) {
     counterPlus();
@@ -36,7 +36,7 @@ const progressionCheck = () => {
         result +
         "'. Let's try again, " +
         name +
-        "!"
+        '!'
     );
   }
 };

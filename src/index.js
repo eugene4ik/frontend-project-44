@@ -1,12 +1,12 @@
-import readlineSync from "readline-sync";
-import { name } from "../src/cli.mjs";
+import readlineSync from 'readline-sync';
+import { name } from '../src/cli.mjs';
 let counter = 0;
 
 const counterPlus = () => {
-  console.log("Correct!");
+  console.log('Correct!');
   counter += 1;
   if (counter === 3) {
-    console.log("Congratulations, " + name + "! ");
+    console.log('Congratulations, ' + name + '! ');
   }
 };
 

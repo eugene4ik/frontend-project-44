@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { counterPlus, counter, answer, randomNum } from "../src/index.js";
-import { name, userNameFunc } from "../src/cli.mjs";
+import { counterPlus, counter, answer, randomNum } from '../src/index.js';
+import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -20,8 +20,8 @@ const primeCheck = () => {
     prime = true;
   }
   if (
-    (prime === true && answ === "yes") ||
-    (prime === false && answ === "no")
+    (prime === true && answ === 'yes') ||
+    (prime === false && answ === 'no')
   ) {
     counterPlus();
     if (counter < 3) {
@@ -29,11 +29,11 @@ const primeCheck = () => {
     }
   } else {
     console.log(
-      "" +
+      '' +
         answ +
         " is wrong answer ;(. Correct answer was 'yes'. Let's try again, " +
         name +
-        "!"
+        '!'
     );
   }
 };

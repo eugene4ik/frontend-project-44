@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { counterPlus, counter, randomNum, answer } from "../src/index.js";
-import { name, userNameFunc } from "../src/cli.mjs";
+import { counterPlus, counter, randomNum, answer } from '../src/index.js';
+import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
-console.log("Find the greatest common divisor of given numbers.");
+console.log('Find the greatest common divisor of given numbers.');
 
 const gcdCheck = () => {
   const [numberOne, numberTwo] = randomNum();
@@ -30,7 +30,7 @@ const gcdCheck = () => {
         result +
         "'. Let's try again, " +
         name +
-        "!"
+        '!'
     );
   }
 };

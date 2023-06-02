@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-import { counterPlus, counter, randomNum } from "../src/index.js";
-import { name, userNameFunc } from "../src/cli.mjs";
+import readlineSync from 'readline-sync';
+import { counterPlus, counter, randomNum } from '../src/index.js';
+import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
-console.log("What is the result of the expression?");
+console.log('What is the result of the expression?');
 const calcCheck = () => {
   const [numberOne, numberTwo] = randomNum();
   let result;
-  let operators = ["+", "-", "*"];
+  let operators = ['+', '-', '*'];
   let randomOperator = operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
   const answer = readlineSync.question(`Your answer: `);
 
-  if (randomOperator === "-") {
+  if (randomOperator === '-') {
     result = numberOne - numberTwo;
-  } else if (randomOperator === "+") {
+  } else if (randomOperator === '+') {
     result = numberOne + numberTwo;
-  } else if (randomOperator === "*") {
+  } else if (randomOperator === '*') {
     result = numberOne * numberTwo;
   }
 
@@ -34,7 +34,7 @@ const calcCheck = () => {
         result +
         "'. Let's try again, " +
         name +
-        "!"
+        '!'
     );
   }
 };
