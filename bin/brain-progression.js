@@ -21,7 +21,7 @@ const progressionCheck = () => {
   let randomIndex = Math.floor(Math.random() * rand.length);
   let result = rand[randomIndex];
   rand[randomIndex] = "..";
-  console.log(`Question: ${rand} `);
+  console.log(`Question: ${rand.join(" ")} `);
   const answ = answer();
   if (result == answ) {
     counterPlus();
