@@ -12,7 +12,6 @@ const primeCheck = () => {
 
   const answ = answer();
 
-  //numberOne === 1 ? (prime = false) : prime === true;
   if (numberOne % 2 == 0 && numberOne != 2) {
     prime = false;
   } else if (numberOne % 3 == 0 && numberOne != 3) {
@@ -30,9 +29,13 @@ const primeCheck = () => {
     if (counter < 3) {
       primeCheck();
     }
+  } else if (prime === true && answ === 'no') {
+    console.log(
+      `'${answ}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`
+    );
   } else {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`
     );
   }
 };

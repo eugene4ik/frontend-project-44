@@ -12,7 +12,7 @@ const calcCheck = () => {
     operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
   let answ = answer();
-
+  let answNum = parseInt(answ);
   if (randomOperator === '-') {
     result = numberOne - numberTwo;
   } else if (randomOperator === '+') {
@@ -21,14 +21,14 @@ const calcCheck = () => {
     result = numberOne * numberTwo;
   }
 
-  if (result == answ) {
+  if (result === answNum) {
     counterPlus();
     if (counter < 3) {
       calcCheck();
     }
-  } else if (result != answ) {
+  } else if (result !== answNum) {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
     );
   }
 };

@@ -9,7 +9,7 @@ console.log('What number is missing in the progression?');
 const progressionCheck = () => {
   const [numberOne, numberThree] = randomNum();
   let i = Math.floor(Math.random() * 10) + 1;
-  let iter = Math.floor(Math.random() * 5) + 1; // numberThree
+  let iter = Math.floor(Math.random() * 5) + 1;
   let num = i + 50;
   let rand = [];
   for (i; i <= num; i += iter) {
@@ -19,18 +19,21 @@ const progressionCheck = () => {
     }
   }
   let randomIndex = Math.floor(Math.random() * rand.length);
-  let result = rand[randomIndex];
+  let result = 0;
+
+  result = rand[randomIndex];
   rand[randomIndex] = '..';
   console.log(`Question: ${rand.join(' ')} `);
-  const answ = answer();
-  if (result == answ) {
+  let answ = answer();
+  let answNum = parseInt(answ);
+  if (result === answNum) {
     counterPlus();
     if (counter < 3) {
       progressionCheck();
     }
-  } else if (result != answ) {
+  } else if (result !== answNum) {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
     );
   }
 };

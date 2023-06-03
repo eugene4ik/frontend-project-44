@@ -9,6 +9,7 @@ const gcdCheck = () => {
   const [numberOne, numberTwo] = randomNum();
   console.log(`Question: ${numberOne} ${numberTwo} `);
   const answ = answer();
+  let answNum = parseInt(answ);
   const gcd = (a, b) => {
     if (b === 0) {
       return a;
@@ -17,14 +18,14 @@ const gcdCheck = () => {
     }
   };
   let result = gcd(numberOne, numberTwo);
-  if (result == answ) {
+  if (result === answNum) {
     counterPlus();
     if (counter < 3) {
       gcdCheck();
     }
-  } else if (result != answ) {
+  } else if (result !== answNum) {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
     );
   }
 };

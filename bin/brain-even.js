@@ -3,7 +3,7 @@ import { name, userNameFunc } from '../src/cli.mjs';
 import { counterPlus, counter, randomNum, answer } from '../src/index.js';
 
 userNameFunc();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log('answer "yes" if the number is even, otherwise answer "no".');
 const evenCheck = () => {
   const [numberOne] = randomNum();
   console.log(`Question: ${numberOne} `);
@@ -18,11 +18,11 @@ const evenCheck = () => {
     }
   } else if (numberOne % 2 === 0 && answ != 'yes') {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct anwser was 'yes'. Let's try again, ${name}!`
     );
   } else if (numberOne % 2 != 0 && answ != 'no') {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct anwser was 'no'. Let's try again, ${name}!`
     );
   }
 };

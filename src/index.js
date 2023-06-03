@@ -18,7 +18,8 @@ const randomNum = () => {
 };
 
 const answer = () => {
-  const answ = readlineSync.question(`Your answer: `);
+  let answ = readlineSync.question(`Your answer: `);
+
   return answ;
 };
 
