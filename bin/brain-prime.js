@@ -27,7 +27,7 @@ const primeCheck = () => {
     prime = true;
   }
   if (
-    (prime === true && answ === 'yes') 
+    (prime === true && answ === 'yes')
     || (prime === false && answ === 'no')
   ) {
     counterPlus();
