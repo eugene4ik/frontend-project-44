@@ -6,12 +6,12 @@ let counter = 0;
 
 const incrementCounter = () => {
   counter += 1;
+  return counter;
 };
 
 const counterPlus = () => {
   console.log('Correct!');
-  incrementCounter();
-  if (counter === 3) {
+  if (counter === 2) {
     console.log(`Congratulations, ${name}!`);
   }
 };
@@ -33,5 +33,4 @@ export {
   randomNum,
   incrementCounter,
   answer,
-  counter,
 };

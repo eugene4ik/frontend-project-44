@@ -2,7 +2,7 @@
 import {
   counterPlus,
   randomNum,
-  counter,
+  incrementCounter,
   answer,
 } from '../src/index.js';
 import { name, userNameFunc } from '../src/cli.mjs';
@@ -24,7 +24,7 @@ const gcdCheck = () => {
   const result = gcd(numberOne, numberTwo);
   if (result === answNum) {
     counterPlus();
-    if (counter < 3) {
+    if (incrementCounter() < 3) {
       gcdCheck();
     }
   } else if (result !== answNum) {
