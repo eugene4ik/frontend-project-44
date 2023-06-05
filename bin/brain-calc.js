@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { 
-  counterPlus, counter, randomNum, answer 
+  counterPlus, counter, randomNum, answer, 
 } from '../src/index.js';
-import { 
-  name, userNameFunc 
+import {
+name, userNameFunc,
 } from '../src/cli.mjs';
 
 userNameFunc();
