@@ -34,7 +34,7 @@ const calcCheck = () => {
     }
   } else if (result !== answNum) {
     console.log(
-      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`,
     );
   }
 };
