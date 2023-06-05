@@ -19,7 +19,7 @@ const gcdCheck = () => {
     if (b === 0) {
       return a;
     }
-      return gcd(b, a % b);
+    return gcd(b, a % b);
   };
   const result = gcd(numberOne, numberTwo);
   if (result === answNum) {

@@ -11,16 +11,20 @@ const counterPlus = () => {
 };
 
 const randomNum = () => {
-  let numberOne = Math.floor(Math.random() * 10) + 1;
-  let numberTwo = Math.floor(Math.random() * 10) + 1;
-  let numberThree = Math.floor(Math.random() * 5) + 1;
+  const numberOne = Math.floor(Math.random() * 10) + 1;
+  const numberTwo = Math.floor(Math.random() * 10) + 1;
+  const numberThree = Math.floor(Math.random() * 5) + 1;
   return [numberOne, numberTwo, numberThree];
 };
 
 const answer = () => {
-  let answ = readlineSync.question(`Your answer: `);
-
+  const answ = readlineSync.question(`Your answer: `);
   return answ;
 };
 
-export { counterPlus, randomNum, counter, answer };
+export {
+  counterPlus,
+  randomNum,
+  counter,
+  answer,
+};

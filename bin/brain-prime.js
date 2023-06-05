@@ -17,9 +17,9 @@ const primeCheck = () => {
 
   const answ = answer();
 
-  if (numberOne % 2 == 0 && numberOne !== 2) {
+  if (numberOne % 2 === 0 && numberOne !== 2) {
     prime = false;
-  } else if (numberOne % 3 == 0 && numberOne !== 3) {
+  } else if (numberOne % 3 === 0 && numberOne !== 3) {
     prime = false;
   } else if (numberOne === 1) {
     prime = false;
@@ -27,8 +27,8 @@ const primeCheck = () => {
     prime = true;
   }
   if (
-    (prime === true && answ === 'yes') ||
-    (prime === false && answ === 'no')
+    (prime === true && answ === 'yes') 
+    || (prime === false && answ === 'no')
   ) {
     counterPlus();
     if (counter < 3) {
@@ -36,11 +36,11 @@ const primeCheck = () => {
     }
   } else if (prime === true && answ === 'no') {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`,
     );
   } else {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`,
     );
   }
 };

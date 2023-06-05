@@ -1,5 +1,9 @@
 #!/usr/bin/env node
-import { counterPlus, counter, answer, randomNum } from '../src/index.js';
+import {
+  counterPlus,
+  counter,
+  answer,
+} from '../src/index.js';
 import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
@@ -7,25 +11,24 @@ userNameFunc();
 console.log('What number is missing in the progression?');
 
 const progressionCheck = () => {
-  const [numberOne, numberThree] = randomNum();
   let i = Math.floor(Math.random() * 10) + 1;
-  let iter = Math.floor(Math.random() * 5) + 1;
-  let num = i + 50;
-  let rand = [];
+  const iter = Math.floor(Math.random() * 5) + 1;
+  const num = i + 50;
+  const rand = [];
   for (i; i <= num; i += iter) {
     rand.push(i);
-    if (rand.length == 10) {
+    if (rand.length === 10) {
       break;
     }
   }
-  let randomIndex = Math.floor(Math.random() * rand.length);
+  const randomIndex = Math.floor(Math.random() * rand.length);
   let result = 0;
 
   result = rand[randomIndex];
   rand[randomIndex] = '..';
   console.log(`Question: ${rand.join(' ')} `);
-  let answ = answer();
-  let answNum = parseInt(answ);
+  const answ = answer();
+  const answNum = Number(answ);
   if (result === answNum) {
     counterPlus();
     if (counter < 3) {
@@ -33,7 +36,7 @@ const progressionCheck = () => {
     }
   } else if (result !== answNum) {
     console.log(
-      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`,
     );
   }
 };
