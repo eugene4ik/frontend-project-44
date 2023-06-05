@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-import { counterPlus, counter, randomNum, answer } from '../src/index.js';
+import {
+  counterPlus,
+  counter,
+  randomNum,
+  answer,
+} from '../src/index.js';
 import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
@@ -9,15 +14,14 @@ const gcdCheck = () => {
   const [numberOne, numberTwo] = randomNum();
   console.log(`Question: ${numberOne} ${numberTwo} `);
   const answ = answer();
-  let answNum = parseInt(answ);
+  const answNum = Number(answ);
   const gcd = (a, b) => {
     if (b === 0) {
       return a;
-    } else {
-      return gcd(b, a % b);
     }
+      return gcd(b, a % b);
   };
-  let result = gcd(numberOne, numberTwo);
+  const result = gcd(numberOne, numberTwo);
   if (result === answNum) {
     counterPlus();
     if (counter < 3) {
@@ -25,7 +29,7 @@ const gcdCheck = () => {
     }
   } else if (result !== answNum) {
     console.log(
-      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
+      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`,
     );
   }
 };

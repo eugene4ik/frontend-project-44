@@ -15,8 +15,7 @@ const evenCheck = () => {
   const answ = answer();
   if (
     (numberOne % 2 === 0 && answ === 'yes')
-    ||
-    (numberOne % 2 !== 0 && answ === 'no')
+    || (numberOne % 2 !== 0 && answ === 'no')
   ) {
     counterPlus();
     if (counter < 3) {
