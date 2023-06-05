@@ -11,8 +11,8 @@ const calcCheck = () => {
   const randomOperator =
     operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
-  let answ = answer();
-  let answNum = parseInt(answ);
+  const answ = answer();
+  const answNum = parseInt(answ, radix);
   if (randomOperator === '-') {
     result = numberOne - numberTwo;
   } else if (randomOperator === '+') {
