@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import { name } from '../src/cli.mjs';
+import { name } from './cli.mjs';
 
 let counter = 0;
 
