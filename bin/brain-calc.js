@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import {
-  counterPlus, counter, randomNum, answer,
+  counterPlus, 
+  counter, 
+  randomNum, 
+  answer,
 } from '../src/index.js';
 import {
   name, userNameFunc,
@@ -34,10 +37,5 @@ const calcCheck = () => {
       `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
     );
   }
-  else if (result !== answNum) {
-    console.log(
-      `'${answNum}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}!`
-    );
-  }}
 };
 calcCheck();
