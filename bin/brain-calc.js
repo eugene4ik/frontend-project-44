@@ -12,7 +12,7 @@ const calcCheck = () => {
     operators[Math.floor(Math.random() * operators.length)];
   console.log(`Question: ${numberOne} ${randomOperator} ${numberTwo}`);
   const answ = answer();
-  const answNum = parseInt(answ, radix);
+  const answNum = Number(answ);
   if (randomOperator === '-') {
     result = numberOne - numberTwo;
   } else if (randomOperator === '+') {
