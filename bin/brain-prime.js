@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-import { counterPlus, counter, answer, randomNum } from '../src/index.js';
+import {
+  counterPlus,
+  counter,
+  answer,
+  randomNum,
+} from '../src/index.js';
 import { name, userNameFunc } from '../src/cli.mjs';
 
 userNameFunc();
@@ -12,9 +17,9 @@ const primeCheck = () => {
 
   const answ = answer();
 
-  if (numberOne % 2 == 0 && numberOne != 2) {
+  if (numberOne % 2 == 0 && numberOne !== 2) {
     prime = false;
-  } else if (numberOne % 3 == 0 && numberOne != 3) {
+  } else if (numberOne % 3 == 0 && numberOne !== 3) {
     prime = false;
   } else if (numberOne === 1) {
     prime = false;

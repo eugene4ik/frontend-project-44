@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 import { name, userNameFunc } from '../src/cli.mjs';
-import { counterPlus, counter, randomNum, answer } from '../src/index.js';
+import {
+  counterPlus,
+  counter,
+  randomNum,
+  answer,
+} from '../src/index.js';
 
 userNameFunc();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -9,20 +14,21 @@ const evenCheck = () => {
   console.log(`Question: ${numberOne} `);
   const answ = answer();
   if (
-    (numberOne % 2 === 0 && answ === 'yes') ||
-    (numberOne % 2 != 0 && answ === 'no')
+    (numberOne % 2 === 0 && answ === 'yes')
+    ||
+    (numberOne % 2 !== 0 && answ === 'no')
   ) {
     counterPlus();
     if (counter < 3) {
       evenCheck();
     }
-  } else if (numberOne % 2 === 0 && answ != 'yes') {
+  } else if (numberOne % 2 === 0 && answ !== 'yes') {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct anwser was 'yes'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct anwser was 'yes'. Let's try again, ${name}!`,
     );
-  } else if (numberOne % 2 != 0 && answ != 'no') {
+  } else if (numberOne % 2 !== 0 && answ !== 'no') {
     console.log(
-      `'${answ}' is wrong answer ;(. Correct anwser was 'no'. Let's try again, ${name}!`
+      `'${answ}' is wrong answer ;(. Correct anwser was 'no'. Let's try again, ${name}!`,
     );
   }
 };
