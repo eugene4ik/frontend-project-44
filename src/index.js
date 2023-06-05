@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 
 import { name } from '../src/cli.mjs';
+
 let counter = 0;
 
 const counterPlus = () => {
@@ -19,7 +20,7 @@ const randomNum = () => {
 };
 
 const answer = () => {
-  const answ = readlineSync.question(`Your answer:`);
+  const answ = readlineSync.question('Your answer: ');
   return answ;
 };
 
