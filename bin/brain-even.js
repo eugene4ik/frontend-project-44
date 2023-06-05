@@ -3,7 +3,7 @@ import { name, userNameFunc } from '../src/cli.mjs';
 import { counterPlus, counter, randomNum, answer } from '../src/index.js';
 
 userNameFunc();
-console.log('answer "yes" if the number is even, otherwise answer "no".');
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const evenCheck = () => {
   const [numberOne] = randomNum();
   console.log(`Question: ${numberOne} `);
