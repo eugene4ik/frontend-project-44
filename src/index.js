@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 import { name } from '../src/cli.mjs';
-const counter = 0;
+let counter = 0;
 
 const counterPlus = () => {
   console.log('Correct!');
