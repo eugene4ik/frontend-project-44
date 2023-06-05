@@ -4,9 +4,13 @@ import { name } from './cli.mjs';
 
 let counter = 0;
 
+const incrementCounter = () => {
+  counter += 1;
+};
+
 const counterPlus = () => {
   console.log('Correct!');
-  counter += 1;
+  incrementCounter();
   if (counter === 3) {
     console.log(`Congratulations, ${name}!`);
   }
@@ -27,6 +31,7 @@ const answer = () => {
 export {
   counterPlus,
   randomNum,
-  counter,
+  incrementCounter,
   answer,
+  counter,
 };
