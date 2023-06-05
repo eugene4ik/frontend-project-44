@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import {
-  counterPlus, 
-  counter, 
-  randomNum, 
+  counterPlus,
+  counter,
+  randomNum,
   answer,
 } from '../src/index.js';
 import {
