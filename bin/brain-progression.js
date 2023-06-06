@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {
   counterPlus,
-  counter,
+  incrementCounter,
   answer,
 } from '../src/index.js';
 import { name, userNameFunc } from '../src/cli.mjs';
@@ -31,7 +31,7 @@ const progressionCheck = () => {
   const answNum = Number(answ);
   if (result === answNum) {
     counterPlus();
-    if (counter < 3) {
+    if (incrementCounter() < 3) {
       progressionCheck();
     }
   } else if (result !== answNum) {

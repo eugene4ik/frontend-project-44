@@ -2,7 +2,7 @@
 import { name, userNameFunc } from '../src/cli.mjs';
 import {
   counterPlus,
-  counter,
+  incrementCounter,
   randomNum,
   answer,
 } from '../src/index.js';
@@ -18,7 +18,7 @@ const evenCheck = () => {
     || (numberOne % 2 !== 0 && answ === 'no')
   ) {
     counterPlus();
-    if (counter < 3) {
+    if (incrementCounter() < 3) {
       evenCheck();
     }
   } else if (numberOne % 2 === 0 && answ !== 'yes') {

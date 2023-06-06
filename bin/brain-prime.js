@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {
   counterPlus,
-  counter,
+  incrementCounter,
   answer,
   randomNum,
 } from '../src/index.js';
@@ -31,7 +31,7 @@ const primeCheck = () => {
     || (prime === false && answ === 'no')
   ) {
     counterPlus();
-    if (counter < 3) {
+    if (incrementCounter() < 3) {
       primeCheck();
     }
   } else if (prime === true && answ === 'no') {

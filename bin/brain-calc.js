@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {
   counterPlus,
-  counter,
+  incrementCounter,
   randomNum,
   answer,
 } from '../src/index.js';
@@ -29,7 +29,7 @@ const calcCheck = () => {
 
   if (result === answNum) {
     counterPlus();
-    if (counter < 3) {
+    if (incrementCounter() < 3) {
       calcCheck();
     }
   } else if (result !== answNum) {
