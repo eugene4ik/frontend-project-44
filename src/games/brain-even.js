@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { question } from 'readline-sync';
 import playGame from '../index.js';
 import { randomNum } from '../utils.js';
 
@@ -13,7 +14,7 @@ const gameQuest = () => {
 };
 
 const brainEven = () => {
-  playGame('even', gameQuest);
+  playGame('even', question, gameQuest);
 };
 
 export { brainEven };

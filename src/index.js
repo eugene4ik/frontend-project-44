@@ -13,15 +13,14 @@ const getQuestion = (greeting) => {
       return 'Answer "yes" if given number is prime. Otherwise answer "no".';
     case 'progression':
       return 'What number is missing in the progression?';
-    default:
-      return 'Invalid question type';
   }
 };
-const playGame = (question, gameQuest) => {
-  userNameFunc();
-  console.log(question);
 
-  for (let i = 0; i < 3; i += 1) {
+const playGame = (greeting, question, gameQuest) => {
+  userNameFunc();
+  console.log(getQuestion(greeting));
+  const numberOfRounds = 3;
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const [question, correctAnswer] = gameQuest();
     console.log(question);
     const userAnswer = answer();

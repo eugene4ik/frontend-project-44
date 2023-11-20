@@ -26,7 +26,7 @@ const gameQuest = () => {
 };
 
 const brainProgression = () => {
-  playGame(question, gameQuest);
+  playGame('progression', question, gameQuest);
 };
 
 export { brainProgression };
