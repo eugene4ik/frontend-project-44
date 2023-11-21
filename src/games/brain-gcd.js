@@ -12,7 +12,7 @@ const gameQuest = () => {
     return gcd(b, a % b);
   };
   const correctAnswer = gcd(numberOne, numberTwo);
-  let correctAnswerString = correctAnswer.toString();
+  const correctAnswerString = correctAnswer.toString();
 
   return [questionGame, correctAnswerString];
 };
