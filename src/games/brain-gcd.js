@@ -13,13 +13,12 @@ const gameQuest = () => {
   };
   const correctAnswer = gcd(numberOne, numberTwo);
   let correctAnswerString = correctAnswer.toString();
-  const result = [questionGame, correctAnswerString];
-  return result;
+
+  return [questionGame, correctAnswerString];
 };
 
 const brainGcd = () => {
-  const [questionGame, correctAnswerString] = gameQuest();
-  playGame('gcd', questionGame, gameQuest);
+  playGame('gcd', gameQuest);
 };
 
 export default brainGcd;

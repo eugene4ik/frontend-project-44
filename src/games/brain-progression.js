@@ -25,8 +25,7 @@ const gameQuest = () => {
 };
 
 const brainProgression = () => {
-  const [questionGame, correctAnswerString] = gameQuest();
-  playGame('progression', questionGame, gameQuest);
+  playGame('progression', gameQuest);
 };
 
 export default brainProgression;

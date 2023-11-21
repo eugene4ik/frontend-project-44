@@ -17,13 +17,11 @@ const gameQuest = () => {
     return 'yes';
   };
   const correctAnswer = isPrime(numberOne);
-  const result = [questionGame, correctAnswer];
-  return result;
+  return [questionGame, correctAnswer];
 };
 
 const brainPrime = () => {
-  const [questionGame, correctAnswer] = gameQuest();
-  playGame('prime', questionGame, gameQuest);
+  playGame('prime', gameQuest);
 };
 
 export default brainPrime;

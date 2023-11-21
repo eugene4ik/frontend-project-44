@@ -25,14 +25,11 @@ const gameQuest = () => {
 
   const correctAnswerString = correctAnswer.toString();
 
-  const result = [questionGame, correctAnswerString];
-
-  return result;
+  return [questionGame, correctAnswerString];
 };
 
 const brainCalc = () => {
-  const [questionGame, correctAnswerString] = gameQuest();
-  playGame('calc', questionGame, gameQuest);
+  playGame('calc', gameQuest);
 };
 
 export default brainCalc;

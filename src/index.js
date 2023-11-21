@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { userNameFunc, name } from './cli.mjs';
 
-const playGame = (greeting, questionGame, gameQuest) => {
+const playGame = (greeting, gameQuest) => {
   userNameFunc();
   const getQuestion = () => {
     switch (greeting) {
@@ -24,7 +24,7 @@ const playGame = (greeting, questionGame, gameQuest) => {
   for (let i = 0; i < numberOfRounds; i += 1) {
     const [questionGame, correctAnswer] = gameQuest();
     console.log(questionGame);
-    const userAnswerChecker = (userAnswer, correctAnswer) => {
+    const userAnswerChecker = (userAnswer) => {
       let shouldStop = false;
       if (userAnswer === correctAnswer) {
         console.log('Correct!');
