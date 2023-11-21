@@ -8,14 +8,14 @@ const gameQuest = () => {
   const question = `Question: ${numberOne} `;
   const isPrime = (numberOne) => {
     if (numberOne <= 1) {
-      return false;
+      return 'no';
     }
-    for (let i = 2; i <= Math.sqrt(numberOne); i++) {
+    for (let i = 2; i <= Math.sqrt(numberOne); i += 1) {
       if (numberOne % i === 0) {
-        return 'yes';
+        return 'no';
       }
     }
-    return 'no';
+    return 'yes';
   };
   const correctAnswer = isPrime();
   const result = [question, correctAnswer];
