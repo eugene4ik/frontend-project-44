@@ -2,7 +2,7 @@
 
 # Description
 
-Brain-Games console game that user can play inside his computer's terminal, containing 5 mini games using simple mathematic calculations such as finding GCD of a number, finding a sum of two numbers, finding a missing number in mathematic progression, checking if number is prime or not, checking if given number is even.
+Brain-Games console game that user can play inside his computer's terminal, containing 5 mini games using simple mathematic calculations such as finding GCD of a number, finding a sum of two numbers, finding a missing number in mathematic progression, checking if number is prime or not, checking if given number is
 
 ### Hexlet tests and linter status:
 

@@ -17,7 +17,7 @@ const gameQuest = () => {
     }
     return 'yes';
   };
-  const correctAnswer = isPrime();
+  const correctAnswer = isPrime(numberOne);
   const result = [question, correctAnswer];
   return result;
 };
