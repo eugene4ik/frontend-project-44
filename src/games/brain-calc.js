@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
-import { randomNum } from '../utils.js';
+import randomNum from '../utils.js';
 
 const gameQuest = () => {
   const [numberOne, numberTwo] = randomNum();
