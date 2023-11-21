@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "first project",
+  "description": "console game that user can play in his computer's terminal, containing 4 mini games using simple mathematic calculatios such as finding GCD of a number, finding a sum of two numbers, finding a missing number in mathematic progression etc",
   "main": "brain-games.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
