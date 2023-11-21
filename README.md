@@ -1,5 +1,9 @@
 # Brain-games
 
+# Description
+
+Brain-Games console game that user can play inside his computer's terminal, containing 5 mini games using simple mathematic calculations such as finding GCD of a number, finding a sum of two numbers, finding a missing number in mathematic progression, checking if number is prime or not, checking if given number is even.
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/eugene4ik/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/eugene4ik/frontend-project-44/actions)
