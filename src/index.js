@@ -1,9 +1,9 @@
-import { userNameFunc, name } from './cli.mjs';
 import readlineSync from 'readline-sync';
+import { userNameFunc, name } from './cli.mjs';
 
-const playGame = (greeting, question, gameQuest) => {
+const playGame = (greeting, questionGame, gameQuest) => {
   userNameFunc();
-  const getQuestion = (greeting) => {
+  const getQuestion = () => {
     switch (greeting) {
       case 'gcd':
         return 'Find the greatest common divisor of given numbers.';
@@ -15,13 +15,15 @@ const playGame = (greeting, question, gameQuest) => {
         return 'Answer "yes" if given number is prime. Otherwise answer "no".';
       case 'progression':
         return 'What number is missing in the progression?';
+      default:
+        return 'No greeting';
     }
   };
   console.log(getQuestion(greeting));
   const numberOfRounds = 3;
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const [question, correctAnswer] = gameQuest();
-    console.log(question);
+    const [questionGame, correctAnswer] = gameQuest();
+    console.log(questionGame);
     const userAnswerChecker = (userAnswer, correctAnswer) => {
       let shouldStop = false;
       if (userAnswer === correctAnswer) {

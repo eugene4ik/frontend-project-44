@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { question } from 'readline-sync';
 import playGame from '../index.js';
 
 const gameQuest = () => {
@@ -18,15 +17,16 @@ const gameQuest = () => {
   };
   const sequence = progressionCheck();
   const randomIndex = Math.floor(Math.random() * sequence.length);
-  let correctAnswer = sequence[randomIndex];
-  let correctAnswerString = correctAnswer.toString();
+  const correctAnswer = sequence[randomIndex];
+  const correctAnswerString = correctAnswer.toString();
   sequence[randomIndex] = '..';
-  const question = `Question: ${sequence.join(' ')} `;
-  return [question, correctAnswerString];
+  const questionGame = `Question: ${sequence.join(' ')} `;
+  return [questionGame, correctAnswerString];
 };
 
 const brainProgression = () => {
-  playGame('progression', question, gameQuest);
+  const [questionGame, correctAnswerString] = gameQuest();
+  playGame('progression', questionGame, gameQuest);
 };
 
-export { brainProgression };
+export default brainProgression;

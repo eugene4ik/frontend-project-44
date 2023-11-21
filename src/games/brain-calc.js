@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { question } from 'readline-sync';
 import playGame from '../index.js';
 import { randomNum } from '../utils.js';
 
@@ -7,7 +6,7 @@ const gameQuest = () => {
   const [numberOne, numberTwo] = randomNum();
   const operators = ['+', '-', '*'];
   const randomOperator = operators[Math.floor(Math.random() * operators.length)];
-  const question = `Question: ${numberOne} ${randomOperator} ${numberTwo}`;
+  const questionGame = `Question: ${numberOne} ${randomOperator} ${numberTwo}`;
 
   let correctAnswer;
   switch (randomOperator) {
@@ -20,17 +19,20 @@ const gameQuest = () => {
     case '*':
       correctAnswer = numberOne * numberTwo;
       break;
+    default:
+      correctAnswer = 'unknown';
   }
 
-  let correctAnswerString = correctAnswer.toString();
+  const correctAnswerString = correctAnswer.toString();
 
-  const result = [question, correctAnswerString];
+  const result = [questionGame, correctAnswerString];
 
   return result;
 };
 
 const brainCalc = () => {
-  playGame('calc', question, gameQuest);
+  const [questionGame, correctAnswerString] = gameQuest();
+  playGame('calc', questionGame, gameQuest);
 };
 
-export { brainCalc };
+export default brainCalc;

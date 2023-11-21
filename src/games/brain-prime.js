@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-import { question } from 'readline-sync';
 import playGame from '../index.js';
 import { randomNum } from '../utils.js';
 
 const gameQuest = () => {
   const [numberOne] = randomNum();
-  const question = `Question: ${numberOne} `;
-  const isPrime = (numberOne) => {
+  const questionGame = `Question: ${numberOne} `;
+  const isPrime = () => {
     if (numberOne <= 1) {
       return 'no';
     }
@@ -18,12 +17,13 @@ const gameQuest = () => {
     return 'yes';
   };
   const correctAnswer = isPrime(numberOne);
-  const result = [question, correctAnswer];
+  const result = [questionGame, correctAnswer];
   return result;
 };
 
 const brainPrime = () => {
-  playGame('prime', question, gameQuest);
+  const [questionGame, correctAnswer] = gameQuest();
+  playGame('prime', questionGame, gameQuest);
 };
 
-export { brainPrime };
+export default brainPrime;
