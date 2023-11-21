@@ -8,7 +8,7 @@ const gameQuest = () => {
   const question = `Question: ${numberOne} `;
   const isPrime = (numberOne) => {
     if (numberOne <= 1) {
-      return 'no';
+      return false;
     }
     for (let i = 2; i <= Math.sqrt(numberOne); i++) {
       if (numberOne % i === 0) {
