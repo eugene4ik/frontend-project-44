@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
-import randomNum from '../utils.js';
+import generateRanNum from '../utils.js';
 
-const gameQuest = () => {
-  const [numberOne] = randomNum();
+const askQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const infoSender = () => {
+  const numberOne = generateRanNum(10);
   const questionGame = `Question: ${numberOne} `;
-  const correctAnswer = [numberOne] % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = numberOne % 2 === 0 ? 'yes' : 'no';
 
   return [questionGame, correctAnswer];
 };
 
 const brainEven = () => {
-  playGame('even', gameQuest);
+  playGame(askQuestion, infoSender);
 };
 
 export default brainEven;

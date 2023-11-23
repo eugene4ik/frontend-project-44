@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
 
-const gameQuest = () => {
+const askQuestion = 'What number is missing in the progression?';
+
+const infoSender = () => {
   const progressionCheck = () => {
     let i = Math.floor(Math.random() * 10) + 1;
     const iter = Math.floor(Math.random() * 5) + 1;
@@ -25,7 +27,7 @@ const gameQuest = () => {
 };
 
 const brainProgression = () => {
-  playGame('progression', gameQuest);
+  playGame(askQuestion, infoSender);
 };
 
 export default brainProgression;

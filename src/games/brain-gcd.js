@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
-import randomNum from '../utils.js';
+import generateRanNum from '../utils.js';
 
-const gameQuest = () => {
-  const [numberOne, numberTwo] = randomNum();
+const askQuestion = 'Find the greatest common divisor of given numbers.';
+
+const infoSender = () => {
+  const numberOne = generateRanNum(10);
+  const numberTwo = generateRanNum(10);
   const questionGame = `Question: ${numberOne} ${numberTwo}`;
   const gcd = (a, b) => {
     if (b === 0) {
@@ -18,7 +21,7 @@ const gameQuest = () => {
 };
 
 const brainGcd = () => {
-  playGame('gcd', gameQuest);
+  playGame(askQuestion, infoSender);
 };
 
 export default brainGcd;

@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
-import randomNum from '../utils.js';
+import generateRanNum from '../utils.js';
 
-const gameQuest = () => {
-  const [numberOne] = randomNum();
+const askQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const infoSender = () => {
+  const numberOne = generateRanNum(10);
   const questionGame = `Question: ${numberOne} `;
   const isPrime = () => {
     if (numberOne <= 1) {
@@ -21,7 +23,7 @@ const gameQuest = () => {
 };
 
 const brainPrime = () => {
-  playGame('prime', gameQuest);
+  playGame(askQuestion, infoSender);
 };
 
 export default brainPrime;

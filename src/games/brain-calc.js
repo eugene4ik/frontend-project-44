@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
-import randomNum from '../utils.js';
+import generateRanNum from '../utils.js';
 
-const gameQuest = () => {
-  const [numberOne, numberTwo] = randomNum();
+const askQuestion = 'What is the result of the expression?';
+
+const infoSender = () => {
+  const numberOne = generateRanNum(10);
+  const numberTwo = generateRanNum(10);
   const operators = ['+', '-', '*'];
   const randomOperator = operators[Math.floor(Math.random() * operators.length)];
   const questionGame = `Question: ${numberOne} ${randomOperator} ${numberTwo}`;
@@ -29,7 +32,7 @@ const gameQuest = () => {
 };
 
 const brainCalc = () => {
-  playGame('calc', gameQuest);
+  playGame(askQuestion, infoSender);
 };
 
 export default brainCalc;
